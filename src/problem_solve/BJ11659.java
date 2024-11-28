@@ -9,7 +9,7 @@ import java.util.StringTokenizer;
 /**
  * 구간 합 관련 문제
  */
-public class BJ11649 {
+public class BJ11659 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
