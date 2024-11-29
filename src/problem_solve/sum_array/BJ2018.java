@@ -1,4 +1,4 @@
-package problem_solve;
+package problem_solve.sum_array;
 
 import java.util.Scanner;
 
