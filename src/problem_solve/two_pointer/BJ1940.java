@@ -106,3 +106,41 @@ class Second {
 
     }
 }
+
+class Third {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int ans = 0;
+
+        //입력받기
+        int n = sc.nextInt();
+        int m = sc.nextInt();
+        int[] arr = new int[n];
+        for(int i=0; i<n; i++) {
+            arr[i] = sc.nextInt();
+        }
+
+        //1회 반복을 위한 정렬
+        Arrays.sort(arr);
+
+        int sp = 0;
+        int ep = arr.length-1;
+
+        //둘이 교차되기 전까지
+        while(sp < ep) {
+            //두 수의 합이 기준보다 크면 큰 수를 작게
+            if(arr[sp] + arr[ep] > m) ep--;
+            //두 수의 합이 기준보다 작으면 작은 수를 크게
+            else if(arr[sp] + arr[ep] < m) sp++;
+            //두 수의 합이 같다면 모두 사용된 숫자이므로 한칸씩 이동 후 결과+1
+            else if(arr[sp] + arr[ep] == m) {
+                sp++;
+                ep--;
+                ans++;
+            }
+            //두 수의 합을 기준으로 경우의 수를 모두 없앨 수 있었다.
+        }
+        System.out.println(ans);
+
+    }
+}
