@@ -1,4 +1,4 @@
-package problem_solve.two_pointer;
+package problem_solve.sum_array;
 
 import java.io.BufferedReader;
 import java.io.IOException;

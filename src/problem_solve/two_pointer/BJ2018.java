@@ -1,4 +1,4 @@
-package problem_solve.sum_array;
+package problem_solve.two_pointer;
 
 import java.util.Scanner;
 
@@ -33,18 +33,27 @@ public class BJ2018 {
 class Second {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
+        //연속된 수의 합
         int target = sc.nextInt();
+        //시작점
         int startP = 1;
+        //마지막점
         int endP = 1;
+        //합
         int sum = 1;
+        //정답
         int count = 1;
+        //마지막 포인터가 타겟보다 작은동안
         while(endP<target) {
+            //만약 합이 target보다 작으면
             if(sum < target){
                 endP++;
                 sum += endP;
+            //만약 합이 target보다 크면
             } else if(sum > target) {
                 sum -= startP;
                 startP++;
+            //만약 합이 target과 같다면
             } else if(sum == target) {
                 endP++;
                 sum += endP;
