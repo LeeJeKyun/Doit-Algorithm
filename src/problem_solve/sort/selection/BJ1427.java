@@ -1,4 +1,4 @@
-package problem_solve.sort;
+package problem_solve.sort.selection;
 
 import java.util.Scanner;
 
